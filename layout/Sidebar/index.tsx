@@ -1,4 +1,6 @@
 import HomeIcon from '@/assets/icons/HomeIcon';
+import LibraryICon from '@/assets/icons/LibraryIcon';
+import SearchIcon from '@/assets/icons/SearchIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -14,13 +16,13 @@ const navigation = [
   {
     id: '2',
     title: 'Search',
-    icon: <HomeIcon />,
+    icon: <SearchIcon />,
     url: '/search',
   },
   {
     id: '3',
     title: 'Your Library',
-    icon: <HomeIcon />,
+    icon: <LibraryICon />,
     url: '/library',
   },
 ];
