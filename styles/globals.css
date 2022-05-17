@@ -3,17 +3,57 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-      'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/fonts/CircularStd-Book.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: fallback;
   }
 
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/fonts/CircularStd-Medium.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/fonts/CircularStd-Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'CircularStd';
+    src: url('/fonts/CircularStd-Black.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+  }
+
+  html {
+    font-family: CircularStd, system-ui, sans-serif;
+    font-weight: 200;
+  }
+
+  .link {
+    @apply flex items-center gap-3 font-100 text-base text-gray-500 transition-all duration-150 ease-out hover:text-white;
+  }
+
+  .link svg path {
+    stroke: rgb(107 114 128 / var(--tw-text-opacity));
+  }
+
+  .link:hover svg path {
+    stroke: white;
+  }
+
+  .activeLink svg path {
+    stroke: white;
+    fill: white;
   }
 }
