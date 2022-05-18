@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 import { Fragment } from 'react';
 import PageLayout from '../layout/PageLayout';
 import Sidebar from '../layout/Sidebar';
@@ -16,6 +17,10 @@ const Home: NextPage = () => {
       <PageLayout>
         <main className='bg-[#121212] h-full text-white p-6'>
           <h1>Content Here</h1>
+
+          <Link href={'/login'}>
+            <button className='btn'>Login</button>
+          </Link>
         </main>
       </PageLayout>
     </Fragment>

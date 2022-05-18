@@ -17,7 +17,7 @@ const login: FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ pro
       </Head>
 
       <div className='border border-gray-300 py-5 flex justify-center items-center'>
-        <Link href={'/login'}>
+        <Link href={'/'}>
           <div className='relative w-[190px] h-[60px] cursor-pointer transition-all duration-300 ease-out active:scale-90 active:opacity-80'>
             <Image
               src={'/favicons/Spotify_Logo_RGB_Black.png'}
