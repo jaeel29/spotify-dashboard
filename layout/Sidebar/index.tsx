@@ -1,11 +1,14 @@
 import HomeIcon from '@/assets/icons/HomeIcon';
 import LibraryICon from '@/assets/icons/LibraryIcon';
 import SearchIcon from '@/assets/icons/SearchIcon';
+import useSpotify from 'hooks/useSpotify';
 import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { playlistIdState } from 'atoms/playlistAtom';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
 
 const navigation = [
   {
@@ -29,8 +32,18 @@ const navigation = [
 ];
 
 const Sidebar = () => {
+  const router = useRouter();
   const { data: session, status } = useSession();
   const [activeIndex, setActiveIndex] = useState(navigation[0].id);
+  const [playlists, setPlaylists] = useState<any>([]);
+  const playlistId = useRecoilValue<any>(playlistIdState);
+  const spotifyApi = useSpotify();
+
+  useEffect(() => {
+    if (spotifyApi.getAccessToken()) {
+      spotifyApi.getUserPlaylists().then((data) => setPlaylists(data.body.items));
+    }
+  }, [session, spotifyApi]);
 
   return (
     <div className='bg-black w-[240px] h-full p-6 overflow-y-auto scrollbar-hide'>
@@ -63,13 +76,18 @@ const Sidebar = () => {
       </nav>
 
       <div className='flex flex-col gap-6 py-6'>
-        {Array(20)
-          .fill(4)
-          .map((x, index) => (
-            <p className='link' key={index}>
-              Playlist
-            </p>
-          ))}
+        {playlists.map((playlist: any) => (
+          <span
+            className='link'
+            key={playlist.id}
+            onClick={() => {
+              // setPlaylistId(playlist.id);
+              router.push(`/${playlist.name}`);
+            }}
+          >
+            {playlist.name}
+          </span>
+        ))}
       </div>
     </div>
   );

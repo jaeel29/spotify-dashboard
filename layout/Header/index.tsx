@@ -1,4 +1,5 @@
 import ArrowDown from '@/assets/icons/ArrowDown';
+import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -8,7 +9,10 @@ const Header = ({ session }: any) => {
       <div className='ml-auto flex gap-6'>
         <button className='btn-outline'>Upgrade</button>
 
-        <div className='flex items-center gap-2 px-1.5 py-1 pr-3 cursor-pointer rounded-full bg-black bg-opacity-70 transition-all duration-300 ease-out active:scale-95'>
+        <div
+          onClick={() => signOut()}
+          className='flex items-center gap-2 px-1.5 py-1 pr-3 cursor-pointer rounded-full bg-black bg-opacity-70 transition-all duration-300 ease-out active:scale-95'
+        >
           <div className='w-8 h-8 relative rounded-full overflow-hidden'>
             <Image
               src={session?.user?.image!}
