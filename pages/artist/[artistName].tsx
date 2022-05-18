@@ -1,10 +1,15 @@
+import VerifiedIcon from '@/assets/icons/VerifiedIcon';
+import Header from 'layout/Header';
 import PageLayout from 'layout/PageLayout';
+import { useSession } from 'next-auth/react';
 import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { Fragment } from 'react';
 
 const Artist = () => {
   const router = useRouter();
+  const { data: session, status } = useSession({ required: true });
 
   const artistName = router.query.artistName;
 
@@ -17,7 +22,41 @@ const Artist = () => {
       </Head>
 
       <PageLayout>
-        <h1 className='text-white'>Artist name is: {artistName}</h1>
+        <main className='h-full'>
+          {status === 'loading' ? (
+            <div className='h-full flex justify-center items-center'>
+              <p>Loading</p>
+            </div>
+          ) : (
+            <div className='h-full relative overflow-y-auto scrollbar-hide'>
+              <Header session={session} />
+
+              <div className='h-[calc(100%-60px)]'>
+                <div className='relative'>
+                  <div className='h-[400px] w-full relative'>
+                    <Image
+                      src={'/images/artists/Dizzy-dros-banner.png'}
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition={'bottom'}
+                      alt='Artist banner'
+                    />
+                  </div>
+
+                  <div className='flex flex-col gap-3 absolute bottom-8 left-8'>
+                    <div className='flex items-center gap-1'>
+                      <VerifiedIcon />
+                      <span className='text-white text-sm font-100'>Verified Artist</span>
+                    </div>
+
+                    <h1 className='text-[90px] font-400 text-white leading-none'>Dizzy DROS</h1>
+                    <span className='text-white font-100 text-base'>113,832 monthly listeners</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </main>
       </PageLayout>
     </Fragment>
   );
