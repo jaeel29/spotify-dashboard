@@ -1,6 +1,6 @@
 import MusicContainer from 'components/MusicContainer';
-import type { NextPage } from 'next';
-import { signOut } from 'next-auth/react';
+import type { GetServerSideProps, NextPage } from 'next';
+import { getSession, signOut } from 'next-auth/react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -24,3 +24,13 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session,
+    },
+  };
+};

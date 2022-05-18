@@ -5,8 +5,6 @@ import React from 'react';
 const MusicContainer = () => {
   const { data: session, status } = useSession({ required: true });
 
-  console.log(session);
-
   // let content;
 
   // if (status === 'loading') {

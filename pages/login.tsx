@@ -6,8 +6,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 const login: FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ providers }) => {
-  // console.log(providers);
-
   return (
     <Fragment>
       <Head>

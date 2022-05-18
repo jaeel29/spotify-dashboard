@@ -18,8 +18,6 @@ const params = {
   ].join(','),
 };
 
-console.log(params.scope);
-
 const queryParamsString = new URLSearchParams(params);
 
 export const LOGIN_URL = `https://accounts.spotify.com/authorize?${queryParamsString.toString()}`;

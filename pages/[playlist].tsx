@@ -1,5 +1,6 @@
 import VerifiedIcon from '@/assets/icons/VerifiedIcon';
 import { playlistIdState, playlistState } from 'atoms/playlistAtom';
+import Songs from 'components/Songs';
 import useSpotify from 'hooks/useSpotify';
 import Header from 'layout/Header';
 import PageLayout from 'layout/PageLayout';
@@ -29,9 +30,6 @@ const Artist = () => {
       .catch((err) => console.error(`Something went wrong ${err} 🔥`));
   }, [spotifyApi, playlistId, setPlaylist]);
 
-  // console.log(playlistId);
-  console.log(playlist);
-
   return (
     <Fragment>
       <Head>
@@ -50,8 +48,8 @@ const Artist = () => {
             <div className='h-full relative overflow-y-auto scrollbar-hide'>
               <Header session={session} />
 
-              <div className='h-[calc(100%-60px)]'>
-                <div className='relative h-[400px] pl-8 flex items-center gap-7 bg-gradient-to-b from-red-700'>
+              <div className='pb-8'>
+                <div className='relative h-[400px] pl-8 flex items-center gap-7 bg-gradient-to-b from-red-700 mb-[70px]'>
                   <div className='flex items-center gap-7 '>
                     <div className='h-[230px] w-[230px] relative'>
                       <Image
@@ -80,6 +78,8 @@ const Artist = () => {
                     </div>
                   </div>
                 </div>
+
+                <Songs />
               </div>
             </div>
           )}
