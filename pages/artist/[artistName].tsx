@@ -1,13 +1,13 @@
-import MusicContainer from 'components/MusicContainer';
-import type { NextPage } from 'next';
-import { signOut } from 'next-auth/react';
+import PageLayout from 'layout/PageLayout';
 import Head from 'next/head';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment } from 'react';
-import PageLayout from '../layout/PageLayout';
+import React, { Fragment } from 'react';
 
-const Home: NextPage = () => {
+const Artist = () => {
+  const router = useRouter();
+
+  const artistName = router.query.artistName;
+
   return (
     <Fragment>
       <Head>
@@ -17,10 +17,10 @@ const Home: NextPage = () => {
       </Head>
 
       <PageLayout>
-        <MusicContainer />
+        <h1 className='text-white'>Artist name is: {artistName}</h1>
       </PageLayout>
     </Fragment>
   );
 };
 
-export default Home;
+export default Artist;

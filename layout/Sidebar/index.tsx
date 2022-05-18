@@ -32,10 +32,8 @@ const Sidebar = () => {
   const { data: session, status } = useSession();
   const [activeIndex, setActiveIndex] = useState(navigation[0].id);
 
-  // console.log(session);
-
   return (
-    <div className='bg-black w-[240px] h-full p-6'>
+    <div className='bg-black w-[240px] h-full p-6 overflow-y-auto scrollbar-hide'>
       <Link href={'/'}>
         <div className='w-[150px] h-[40px] relative mb-5 hover:opacity-70 cursor-pointer'>
           <Image
@@ -63,6 +61,16 @@ const Sidebar = () => {
           ))}
         </ul>
       </nav>
+
+      <div className='flex flex-col gap-6 py-6'>
+        {Array(20)
+          .fill(4)
+          .map((x, index) => (
+            <p className='link' key={index}>
+              Playlist
+            </p>
+          ))}
+      </div>
     </div>
   );
 };
