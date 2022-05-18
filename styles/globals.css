@@ -56,4 +56,8 @@
     stroke: white;
     fill: white;
   }
+
+  .btn {
+    @apply bg-[#1CD760] text-black text-sm font-200 py-3 px-5 rounded-full uppercase tracking-[3px] border-0 outline-none transition-all duration-300 ease-out active:scale-90 active:bg-[#159B45];
+  }
 }
