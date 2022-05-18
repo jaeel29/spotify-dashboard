@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 const login: FC<InferGetServerSidePropsType<typeof getServerSideProps>> = ({ providers }) => {
-  console.log(providers);
+  // console.log(providers);
 
   return (
     <Fragment>
@@ -45,8 +45,6 @@ export default login;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const providers = await getProviders();
-
-  // console.log(providers);
 
   return {
     props: {

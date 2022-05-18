@@ -1,6 +1,7 @@
 import HomeIcon from '@/assets/icons/HomeIcon';
 import LibraryICon from '@/assets/icons/LibraryIcon';
 import SearchIcon from '@/assets/icons/SearchIcon';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -28,9 +29,10 @@ const navigation = [
 ];
 
 const Sidebar = () => {
-  const router = useRouter();
+  const { data: session, status } = useSession();
   const [activeIndex, setActiveIndex] = useState(navigation[0].id);
-  console.log(activeIndex);
+
+  // console.log(session);
 
   return (
     <div className='bg-black w-[240px] h-full p-6'>
@@ -42,24 +44,10 @@ const Sidebar = () => {
             objectFit='contain'
             objectPosition='left center'
             alt='Spotify Logo'
+            priority
           />
         </div>
       </Link>
-
-      <nav className=' border-b border-gray-500 border-opacity-40'>
-        <ul className='flex flex-col gap-6 py-6'>
-          {navigation.map(({ id, title, icon, url }) => (
-            <li key={id} onClick={() => setActiveIndex(id)}>
-              <Link href={'/'}>
-                <a className={`link ${activeIndex === id && 'activeLink'}`}>
-                  {icon}
-                  <span className={`${activeIndex === id && 'text-white'}`}>{title}</span>
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
 
       <nav className=' border-b border-gray-500 border-opacity-40'>
         <ul className='flex flex-col gap-6 py-6'>
