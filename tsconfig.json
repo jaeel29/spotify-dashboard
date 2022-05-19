@@ -19,6 +19,6 @@
       "@/assets/*": ["components/assets/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hooks/useSpotify.js"],
   "exclude": ["node_modules"]
 }
