@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { playlistIdState } from 'atoms/playlistAtom';
 import { useRouter } from 'next/router';
 
@@ -36,7 +36,7 @@ const Sidebar = () => {
   const { data: session, status } = useSession();
   const [activeIndex, setActiveIndex] = useState(navigation[0].id);
   const [playlists, setPlaylists] = useState<any>([]);
-  const playlistId = useRecoilValue<any>(playlistIdState);
+  const [playlistId, setPlaylistId] = useRecoilState<any>(playlistIdState);
   const spotifyApi = useSpotify();
 
   useEffect(() => {
@@ -81,8 +81,10 @@ const Sidebar = () => {
             className='link'
             key={playlist.id}
             onClick={() => {
-              // setPlaylistId(playlist.id);
-              router.push(`/${playlist.name}`);
+              if (typeof playlist?.id === 'string') {
+                setPlaylistId(playlist.id);
+                router.push(`/${playlist?.id}`);
+              }
             }}
           >
             {playlist.name}

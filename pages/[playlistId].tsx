@@ -18,9 +18,6 @@ const Artist = () => {
   const [playlist, setPlaylist] = useRecoilState<any>(playlistState);
   const spotifyApi = useSpotify();
 
-  const router = useRouter();
-  const artistName = router.query.playlist;
-
   useEffect(() => {
     spotifyApi
       .getPlaylist(playlistId)
@@ -46,7 +43,7 @@ const Artist = () => {
             </div>
           ) : (
             <div className='h-full relative overflow-y-auto scrollbar-hide'>
-              <Header session={session} />
+              <Header />
 
               <div className='pb-8'>
                 <div className='relative h-[400px] pl-8 flex items-center gap-7 bg-gradient-to-b from-red-700 mb-[70px]'>
@@ -71,7 +68,9 @@ const Artist = () => {
                         <span className='text-white text-sm font-100'>Verified Artist</span>
                       </div>
 
-                      <h1 className='text-[90px] font-400 text-white leading-none'>{artistName}</h1>
+                      <h1 className='text-[90px] font-400 text-white leading-none'>
+                        {playlist?.name}
+                      </h1>
                       <span className='text-white font-100 text-base'>
                         113,832 monthly listeners
                       </span>

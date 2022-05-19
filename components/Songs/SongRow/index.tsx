@@ -12,10 +12,10 @@ const SongRow = ({ track, index }: any) => {
 
   const playSong = () => {
     setCurrentTrackId(track?.track?.id);
-    setisPlaying(true);
     spotifyApi.play({
       uris: [track?.track?.uri],
     });
+    setisPlaying(true);
   };
 
   return (

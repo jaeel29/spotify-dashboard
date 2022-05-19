@@ -64,4 +64,12 @@
   .btn-outline {
     @apply bg-transparent border border-gray-400 text-white text-base font-100 py-2 px-5 rounded-full outline-none transition-all duration-300 ease-out hover:scale-110 hover:bg-black hover:border-white;
   }
+
+  .btn-hover {
+    @apply cursor-pointer opacity-50 transition-all duration-200 ease-out  hover:opacity-100 active:scale-90;
+  }
+
+  .border-red {
+    @apply border-2 border-red-500;
+  }
 }

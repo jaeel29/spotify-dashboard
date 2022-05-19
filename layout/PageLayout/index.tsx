@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar';
 const PageLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className='h-screen overflow-hidden'>
-      <div className='flex h-full'>
+      <div className='flex h-full pb-[100px]'>
         <Sidebar />
         <div className='flex-1 bg-[#121212]'>{children}</div>
         <Aside />
