@@ -9,7 +9,6 @@ const params = {
     'user-read-private',
     'user-library-read',
     'user-top-read',
-    // 'user-library-modify',
     'user-read-playback-state',
     'user-modify-playback-state',
     'user-read-currently-playing',

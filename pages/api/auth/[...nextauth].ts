@@ -27,7 +27,7 @@ async function refreshAccessToken(token: any) {
 }
 
 export default NextAuth({
-  // Configure one or more authentication providers
+  //^ Configure one or more authentication providers
   providers: [
     SpotifyProvider({
       clientId: process.env.NEXT_PUBLIC_CLIENT_ID!,
@@ -44,7 +44,7 @@ export default NextAuth({
 
   callbacks: {
     async jwt({ token, account, user }: any) {
-      // initial signin
+      //^ initial signin
       if (account && user) {
         return {
           ...token,
@@ -55,13 +55,14 @@ export default NextAuth({
         };
       }
 
-      // Return previous token if the access token has not expired yet
+      //^ Return previous token if the access token has not expired yet
       if (Date.now() < token.accessTokenExpires) {
         console.log('Existing Access Token is VALID! 😍');
+        console.log(token);
         return token;
       }
 
-      // Access token has expired, try to update it
+      //^ Access token has expired, try to update it
       console.log('Access Token has EXPIRED, Refreshing ♻️');
       return await refreshAccessToken(token);
     },

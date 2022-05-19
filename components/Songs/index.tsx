@@ -1,11 +1,12 @@
 import { playlistState } from 'atoms/playlistAtom';
+import { GetServerSideProps } from 'next';
+import { getSession } from 'next-auth/react';
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 import SongRow from './SongRow';
 
 const Songs = () => {
   const playlist = useRecoilValue<any>(playlistState);
-
   const songs = playlist?.tracks?.items;
 
   console.log(songs);
@@ -20,3 +21,13 @@ const Songs = () => {
 };
 
 export default Songs;
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
+
+  return {
+    props: {
+      session,
+    },
+  };
+};

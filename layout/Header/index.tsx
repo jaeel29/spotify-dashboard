@@ -1,9 +1,11 @@
 import ArrowDown from '@/assets/icons/ArrowDown';
-import { signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react';
 
-const Header = ({ session }: any) => {
+const Header = () => {
+  const { data: session, status } = useSession({ required: true });
+
   return (
     <header className='bg-[#121212] bg-opacity-70 backdrop-blur-lg h-[60px] shrink-0 px-2 overflow-hidden flex items-center sticky top-0 left-0 w-full z-50'>
       <div className='ml-auto flex gap-6'>
