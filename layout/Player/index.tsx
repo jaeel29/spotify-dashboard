@@ -132,19 +132,19 @@ const Player = () => {
             <MuetIcon className='btn-hover' onClick={() => setVolume(50)} />
           )}
 
-          {/* <div className='relative h-[4px] w-[80px] cursor-pointer'>
+          <div className='relative h-[4px] w-[80px] cursor-pointer'>
             <div className='w-full h-full bg-white bg-opacity-20 rounded-full' />
             <div className={`h-full w-[40%] bg-white rounded-full absolute top-0 `} />
-          </div> */}
+          </div>
 
-          <input
+          {/* <input
             type='range'
             value={volume}
             onChange={(e) => setVolume(Number(e.target.value))}
             className='bg-red-500'
             min={0}
             max={100}
-          />
+          /> */}
         </div>
       </div>
     </div>
