@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Smallx",
+    "image": "https://i.scdn.co/image/ab676161000051740ba9b6f968ca80c855d096fb",
+    "isPlaying": "true"
+  },
+  {
+    "id": "2",
+    "name": "Dada",
+    "image": "https://i.scdn.co/image/ab676161000051744b9d699bc0f9f9bf8c55e0d2",
+    "isPlaying": "false"
+  },
+  {
+    "id": "3",
+    "name": "Draganov",
+    "image": "https://i.scdn.co/image/ab6761610000517480f87a6c458e532f92d28d66",
+    "isPlaying": "false"
+  },
+  {
+    "id": "4",
+    "name": "Lmorphine",
+    "image": "https://i.scdn.co/image/ab67616100005174621fa5e4a600ddd3132a1c48",
+    "isPlaying": "false"
+  },
+  {
+    "id": "5",
+    "name": "Snor",
+    "image": "https://i.scdn.co/image/ab67616100005174ef501257b17981e5271871b5",
+    "isPlaying": "false"
+  },
+  {
+    "id": "6",
+    "name": "Ali Samid",
+    "image": "https://i.scdn.co/image/ab6761610000517488dfc96f0ea16c6d5ab84792",
+    "isPlaying": "false"
+  },
+  {
+    "id": "7",
+    "name": "Kouz1",
+    "image": "https://i.scdn.co/image/ab67616100005174908d1e064b3dfb1ad0a9b3b9",
+    "isPlaying": "false"
+  },
+  {
+    "id": "8",
+    "name": "Dollypran",
+    "image": "https://i.scdn.co/image/ab676161000051741519073e8766c2eca79e6aa4",
+    "isPlaying": "false"
+  },
+  {
+    "id": "9",
+    "name": "Furelise",
+    "image": "https://i.scdn.co/image/ab67616100005174f06b88c4b255c96bc5121b7f",
+    "isPlaying": "false"
+  }
+]

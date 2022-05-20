@@ -40,6 +40,10 @@
     font-weight: 200;
   }
 
+  body {
+    @apply text-white;
+  }
+
   .link {
     @apply flex items-center gap-3 font-100 text-base text-gray-500 transition-all duration-150 ease-out cursor-pointer hover:text-white;
   }
@@ -71,5 +75,13 @@
 
   .border-red {
     @apply border-2 border-red-500;
+  }
+
+  .title-1 {
+    @apply text-white text-[36px];
+  }
+
+  .title-2 {
+    @apply text-white text-[24px];
   }
 }

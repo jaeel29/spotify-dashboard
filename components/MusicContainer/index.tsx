@@ -1,6 +1,9 @@
 import Header from 'layout/Header';
 import { useSession } from 'next-auth/react';
 import React from 'react';
+import GoodEvening from './GoodEvening';
+import PopularArtists from './PopularArtists';
+import RecentlyPlayed from './RecentlyPlayed';
 
 const MusicContainer = () => {
   // let content;
@@ -15,23 +18,15 @@ const MusicContainer = () => {
         {/* Header */}
         <Header />
 
-        <div className='h-[calc(100%-60px)] border-red-500 border px-6 pt-6'>
-          {/* Sponsored Banner */}
-          <section>
-            <div className='h-[270px] w-full rounded bg-green-500 mx-auto'></div>
-          </section>
-
+        <div className='h-[calc(100%-60px)] px-6 pt-6'>
           {/* Good afternoon */}
-
-          {/* Shows a try */}
-
-          {/* Your top mixes */}
+          <GoodEvening />
 
           {/* Recently Played */}
-
-          {/* Uniquely yours */}
+          <RecentlyPlayed />
 
           {/* Popular Artists */}
+          <PopularArtists />
 
           {/* Trending Now */}
         </div>

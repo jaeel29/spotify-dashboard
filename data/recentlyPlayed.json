@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Inkonnu Mix",
+    "image": "https://seed-mix-image.spotifycdn.com/v6/img/artist/7ggM69yllqpMykcU8Tror4/en/default",
+    "isPlaying": "true"
+  },
+  {
+    "id": "2",
+    "name": "Gala",
+    "image": "https://i.scdn.co/image/ab67616d00001e026cd617961985673c94687b25",
+    "isPlaying": "false"
+  },
+  {
+    "id": "3",
+    "name": "Daily Mix 1",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab67616d0000b273c2bf756bb43b49ec8a7811f5/1/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "4",
+    "name": "Daily Mix 2",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab67616d0000b273425735bf1438976b6fdd036c/2/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "5",
+    "name": "Daily Mix 3",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb621fa5e4a600ddd3132a1c48/3/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "6",
+    "name": "Daily Mix 4",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5ebb4eed70f59668beda6a12b13/4/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "7",
+    "name": "Daily Mix 5",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb3969aa6a051b674bbaf53bf1/5/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "8",
+    "name": "Daily Mix 6",
+    "image": "https://dailymix-images.scdn.co/v2/img/ab6761610000e5eb2ab7f6f1dbc265e1ee3dedad/6/en/default",
+    "isPlaying": "false"
+  },
+  {
+    "id": "9",
+    "name": "RAP Maroc",
+    "image": "/images/albums/Abatera.jpeg",
+    "isPlaying": "false"
+  }
+]

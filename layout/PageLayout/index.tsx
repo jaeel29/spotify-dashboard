@@ -8,8 +8,8 @@ const PageLayout: FC<{ children: ReactNode }> = ({ children }) => {
     <div className='h-screen overflow-hidden'>
       <div className='flex h-full pb-[100px]'>
         <Sidebar />
-        <div className='flex-1 bg-[#121212]'>{children}</div>
-        <Aside />
+        <div className='grow overflow-hidden bg-[#121212]'>{children}</div>
+        {/* <Aside /> */}
       </div>
 
       <div className='sticky bottom-0 left-0'>

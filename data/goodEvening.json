@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Abatera",
+    "image": "https://i.scdn.co/image/ab67706f0000000275dfdb244c07b29bed5f0d05",
+    "isPlaying": "true"
+  },
+  {
+    "id": "2",
+    "name": "Gala",
+    "image": "https://i.scdn.co/image/ab67616d0000b2736cd617961985673c94687b25",
+    "isPlaying": "false"
+  },
+  {
+    "id": "3",
+    "name": "3azzy 3ando Stylo",
+    "image": "https://i.scdn.co/image/ab67616d00001e025ffffc383b55f8135c480a09",
+    "isPlaying": "false"
+  },
+  {
+    "id": "4",
+    "name": "Lofi Sleep Chill & Study",
+    "image": "https://i.scdn.co/image/ab67616d0000b273c2bf756bb43b49ec8a7811f5",
+    "isPlaying": "false"
+  },
+  {
+    "id": "5",
+    "name": "Shayfeen",
+    "image": "https://i.scdn.co/image/ab6761610000e5eb48e86685c62713705a2859ac",
+    "isPlaying": "false"
+  },
+  {
+    "id": "6",
+    "name": "Dada Mix",
+    "image": "https://seed-mix-image.spotifycdn.com/v6/img/artist/7prKK2GchmQEkgUsAFXEz0/en/default",
+    "isPlaying": "false"
+  }
+]

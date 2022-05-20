@@ -18,6 +18,9 @@ module.exports = {
         400: 400,
       },
     },
+    boxShadow: {
+      '3xl': '5px 0 20px rgba(0, 0, 0, 0.2)',
+    },
   },
   plugins: [require('tailwind-scrollbar-hide')],
 };

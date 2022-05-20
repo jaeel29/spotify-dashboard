@@ -46,7 +46,7 @@ const Sidebar = () => {
   }, [session, spotifyApi]);
 
   return (
-    <div className='bg-black w-[240px] h-full p-6 overflow-y-auto scrollbar-hide'>
+    <div className='bg-black shrink-0 w-[240px] h-full p-6 overflow-y-auto scrollbar-hide'>
       <Link href={'/'}>
         <div className='w-[150px] h-[40px] relative mb-5 hover:opacity-70 cursor-pointer'>
           <Image
@@ -64,7 +64,7 @@ const Sidebar = () => {
         <ul className='flex flex-col gap-6 py-6'>
           {navigation.map(({ id, title, icon, url }) => (
             <li key={id} onClick={() => setActiveIndex(id)}>
-              <Link href={'/'}>
+              <Link href={url}>
                 <a className={`link ${activeIndex === id && 'activeLink'}`}>
                   {icon}
                   <span className={`${activeIndex === id && 'text-white'}`}>{title}</span>
@@ -83,7 +83,7 @@ const Sidebar = () => {
             onClick={() => {
               if (typeof playlist?.id === 'string') {
                 setPlaylistId(playlist.id);
-                router.push(`/${playlist?.id}`);
+                router.push(`/playlist/${playlist?.id}`);
               }
             }}
           >
